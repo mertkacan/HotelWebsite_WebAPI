@@ -1,0 +1,38 @@
+﻿@model Hotel.WebUI.Models.StaffViewModels.UpdateStaffViewModel
+
+@{
+    ViewData["Title"] = "UpdateStaff";
+    Layout = "~/Views/AdminLayout/_AdminLayout.cshtml";
+}
+
+<form action="UpdateStaff" method="post">
+    <input type="hidden" asp-for="StaffID" />
+    <div>
+    <label asp-for="Name">Personel Ad:</label>
+    <input asp-for="Name" type="text" class="form-control" />
+    </div>
+
+    <div>
+    <label asp-for="Title">Personel Unvan:</label>
+    <input asp-for="Title" type="text" class="form-control" />
+    </div>
+
+    <div>
+    <label asp-for="SocialMedia1">Sosyal Medya 1:</label>
+    <input asp-for="SocialMedia1" type="text" class="form-control" />
+    </div>
+
+    <div>
+    <label asp-for="SocialMedia2">Sosyal Medya 2:</label>
+    <input asp-for="SocialMedia2" type="text" class="form-control" />
+    </div>
+
+    <div>
+    <label asp-for="SocialMedia3">Sosyal Medya 3:</label>
+    <input asp-for="SocialMedia3" type="text" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary">Güncelle</button>
+</form>
+
+
+
