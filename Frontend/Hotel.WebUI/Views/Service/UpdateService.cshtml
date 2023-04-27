@@ -1,0 +1,32 @@
+﻿@model Hotel.WebUI.Dtos.ServiceDto.UpdateServiceDto
+
+@{
+    ViewData["Title"] = "AddStaff";
+    Layout = "~/Views/AdminLayout/_AdminLayout.cshtml";
+}
+
+<form asp-action="AddService" method="post">
+    <input type="hidden" asp-for="ServiceID"/>
+    <div>
+        <label asp-for="ServiceIcon">Personel Adı:</label>
+        <input asp-for="ServiceIcon" class="form-control" />
+        <span asp-validation-for="ServiceIcon" class="text-danger"></span>@*Bu şekilde Hata mesajını gösteririm.*@
+    </div>
+    <div>
+        <label asp-for="Title">Personel Unvan:</label>
+        <input type="text" asp-for="Title" class="form-control" />
+        <span asp-validation-for="Title" class="text-danger"></span>@*Bu şekilde Hata mesajını gösteririm.*@
+    </div>
+    <div>
+        <label asp-for="Description">Sosyal Medya 1</label>
+        <input type="text" asp-for="Description" class="form-control" />
+        <span asp-validation-for="Description" class="text-danger"></span>@*Bu şekilde Hata mesajını gösteririm.*@
+    </div>
+    <button type="submit" class="btn btn-primary">Güncelle</button>
+</form>
+
+
+
+
+
+

@@ -1,0 +1,26 @@
+﻿@using Hotel.WebUI.Models.StaffViewModels
+@model List<Hotel.WebUI.Dtos.ServiceDto.ResultServiceDto>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/AdminLayout/_AdminLayout.cshtml";
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Hizmet Başlığı</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.ServiceID</td>
+            <td>@item.Title</td>
+            <td><a asp-action="DeleteService" asp-route-id="@item.ServiceID" class="btn btn-danger">Sil</a></td>
+            <td><a asp-action="UpdateService" asp-route-id="@item.ServiceID" class="btn btn-success">Güncelle</a></td>
+        </tr>
+    }
+</table>
+<a asp-controller="Service" asp-action="AddService" class="btn btn-info">Yeni Personel Girişi</a>
+
